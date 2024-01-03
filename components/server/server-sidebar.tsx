@@ -8,10 +8,10 @@ import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 
 import { ServerHeader } from "./server-header";
-import { ServerSearch } from "./server-search";
-import { ServerSection } from "./server-section";
-import { ServerChannel } from "./server-channel";
-import { ServerMember } from "./server-member";
+// import { ServerSearch } from "./server-search";
+// import { ServerSection } from "./server-section";
+// import { ServerChannel } from "./server-channel";
+// import { ServerMember } from "./server-member";
 
 interface ServerSidebarProps {
   serverId: string;
@@ -85,7 +85,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
       <ServerHeader server={server} role={role} />
       <ScrollArea className="flex-1 px-3">
         <div className="mt-2">
-          <ServerSearch
+          {/* <ServerSearch
             data={[
               {
                 label: "Text Channels",
@@ -124,18 +124,18 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 })),
               },
             ]}
-          />
+          /> */}
         </div>
         <Separator className="bg-zinc-200 dark:bg-zinc-700 rounded-md my-2" />
         {!!textChannels?.length && (
           <div className="mb-2">
-            <ServerSection
+            {/* <ServerSection
               sectionType="channels"
               channelType={ChannelType.TEXT}
               role={role}
               label="Text Channels"
-            />
-            <div className="space-y-[2px]">
+            /> */}
+            {/* <div className="space-y-[2px]">
               {textChannels.map((channel) => (
                 <ServerChannel
                   key={channel.id}
@@ -144,10 +144,10 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                   server={server}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         )}
-        {!!audioChannels?.length && (
+        {/* {!!audioChannels?.length && (
           <div className="mb-2">
             <ServerSection
               sectionType="channels"
@@ -166,8 +166,8 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               ))}
             </div>
           </div>
-        )}
-        {!!videoChannels?.length && (
+        )} */}
+        {/* {!!videoChannels?.length && (
           <div className="mb-2">
             <ServerSection
               sectionType="channels"
@@ -186,8 +186,8 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               ))}
             </div>
           </div>
-        )}
-        {!!members?.length && (
+        )} */}
+        {/* {!!members?.length && (
           <div className="mb-2">
             <ServerSection
               sectionType="members"
@@ -201,7 +201,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               ))}
             </div>
           </div>
-        )}
+        )} */}
       </ScrollArea>
     </div>
   );
