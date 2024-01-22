@@ -61,6 +61,7 @@ export const ChatItem = ({
   const params = useParams();
   const router = useRouter();
 
+  //nếu thành viên đó không phải là thành viên hiện tại (member.id khác currentMember.id), nó sẽ thực hiện việc chuyển hướng đến một trang cụ thể
   const onMemberClick = () => {
     if (member.id === currentMember.id) {
       return;
